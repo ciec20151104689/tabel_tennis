@@ -12,39 +12,73 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var score_a: UITextField!
     @IBOutlet weak var score_b: UITextField!
-    @IBOutlet weak var result: UITextField!
+    @IBOutlet weak var total_a: UITextField!
+    @IBOutlet weak var total_b: UITextField!
+    
     var count_a = 1
     var count_b = 1
+    var point_a = 0
+    var point_b = 0
     var n=0
     
+    @IBOutlet weak var result_a: UITextField!
     @IBOutlet weak var result_b: UITextField!
     
     
 
     
     @IBAction func add_a(_ sender: Any) {
-        
+        result_a.text="0"
+        result_b.text="0"
         var temp=Int()
         count_a=Int(score_a.text!)!
         temp=count_a+1
         score_a.text="\(temp)"
-        result.text="\(count_a)"
+        result_a.text="\(count_a)"
         
         if count_a+1>=10 || count_b+1>=10
         {
             if count_a+1==11 && count_b+1<=9{
-                result.text="Awin"
+                count_a=0
+                count_b=0
+                result_a.text="Awin"
+                result_b.text="Blost"
+                point_a+=1
+                score_a.text="0"
+                score_b.text="0"
+                total_a.text="\(point_a)"
             }
-            else if count_b+1==11&&count_a+1<=9{
-                result.text="Bwin"
+            else if count_b+1==11 && count_a+1<=9{
+                count_a=0
+                count_b=0
+                result_a.text="Alost"
+                result_b.text="Bwin"
+                point_b+=1
+                score_a.text="0"
+                score_b.text="0"
+                total_b.text="\(point_b)"
             }
             else if count_a+1>=10 && count_b+1>=10
             {
                 if count_a - count_b > 1{
-                    result.text="Awin(2)"
+                    count_a=0
+                    count_b=0
+                    result_a.text="Awin"
+                    result_b.text="Blost"
+                    point_a+=1
+                    score_a.text="0"
+                    score_b.text="0"
+                    total_a.text="\(point_a)"
                 }
                 else if count_b - count_a > 1{
-                    result.text="Bwin(2)"
+                    count_a=0
+                    count_b=0
+                    result_a.text="Alost"
+                    result_a.text="Bwin"
+                    point_a+=1
+                    score_a.text="0"
+                    score_b.text="0"
+                    total_a.text="\(point_a)"
                 }
             }
             
@@ -52,6 +86,8 @@ class ViewController: UIViewController {
         
     }
     @IBAction func add_b(_ sender: Any) {
+        result_a.text="0"
+        result_b.text="0"
         var temp_1=Int()
         count_b=Int(score_b.text!)!
         temp_1=count_b+1
@@ -61,23 +97,50 @@ class ViewController: UIViewController {
         if count_a+1>=10 || count_b+1>=10
         {
             if count_a+1==11 && count_b+1<=9{
-                result.text="Awin"
+                count_a=0
+                count_b=0
+                result_a.text="Awin"
+                result_b.text="Blost"
+                point_a+=1
+                score_a.text="0"
+                score_b.text="0"
+                total_a.text="\(point_a)"
             }
-            else if count_b+1==11&&count_a+1<=9{
-                result.text="Bwin"
+            else if count_b+1==11 && count_a+1<=9{
+                count_a=0
+                count_b=0
+                result_a.text="Alost"
+                result_b.text="Bwin"
+                point_b+=1
+                score_a.text="0"
+                score_b.text="0"
+                total_b.text="\(point_b)"
             }
             else if count_a+1>=10 && count_b+1>=10
             {
                 if count_a - count_b > 1{
-                    result.text="Awin(2)"
+                    count_a=0
+                    count_b=0
+                    result_a.text="Awin"
+                    result_b.text="Blost"
+                    point_a+=1
+                    score_a.text="0"
+                    score_b.text="0"
+                    total_a.text="\(point_a)"
                 }
                 else if count_b - count_a > 1{
-                    result.text="Bwin(2)"
+                    count_a=0
+                    count_b=0
+                    result_a.text="Alost"
+                    result_a.text="Bwin"
+                    point_a+=1
+                    score_a.text="0"
+                    score_b.text="0"
+                    total_a.text="\(point_a)"
                 }
             }
             
-        }
-    }
+        }    }
     
     
     
