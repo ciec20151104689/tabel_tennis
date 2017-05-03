@@ -15,26 +15,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var total_a: UITextField!
     @IBOutlet weak var total_b: UITextField!
     
+    
     var count_a = 1
     var count_b = 1
     var point_a = 0
     var point_b = 0
+    var undonum_a = 0
+    
     var n=0
     
     @IBOutlet weak var result_a: UITextField!
     @IBOutlet weak var result_b: UITextField!
     
+   
     
 
-    
-    @IBAction func add_a(_ sender: Any) {
-        result_a.text="0"
-        result_b.text="0"
+        @IBAction func add_a(_ sender: Any) {
+        result_a.text=""
+        result_b.text=""
         var temp=Int()
         count_a=Int(score_a.text!)!
         temp=count_a+1
         score_a.text="\(temp)"
-        result_a.text="\(count_a)"
+        
         
         if count_a+1>=10 || count_b+1>=10
         {
@@ -81,18 +84,20 @@ class ViewController: UIViewController {
                     total_a.text="\(point_a)"
                 }
             }
-            
         }
+            
+            
         
     }
+    
     @IBAction func add_b(_ sender: Any) {
-        result_a.text="0"
-        result_b.text="0"
+        result_a.text=""
+        result_b.text=""
         var temp_1=Int()
         count_b=Int(score_b.text!)!
         temp_1=count_b+1
         score_b.text="\(temp_1)"
-        result_b.text="\(count_b)"
+    
         
         if count_a+1>=10 || count_b+1>=10
         {
@@ -139,8 +144,17 @@ class ViewController: UIViewController {
                     total_a.text="\(point_a)"
                 }
             }
-            
-        }    }
+        }
+        undonum_a = count_a + 1
+        
+    }
+    @IBAction func undo_a(_ sender: Any) {
+        
+        
+        undonum_a -= 1
+        score_a.text="\(undonum_a)"
+        
+    }
     
     
     
