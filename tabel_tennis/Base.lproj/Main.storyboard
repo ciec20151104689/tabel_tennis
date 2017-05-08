@@ -84,11 +84,31 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sv-Uk-94V">
-                                <rect key="frame" x="16" y="430" width="46" height="30"/>
+                                <rect key="frame" x="18" y="413" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="UndoA">
+                                    <color key="titleColor" red="1" green="0.021322741374148357" blue="0.083980777749827928" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="undo_a:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNX-Ja-s9E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d51-PG-ha2">
+                                <rect key="frame" x="258" y="414" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="UndoB">
+                                    <color key="titleColor" red="1" green="0.021322741369999999" blue="0.083980777749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="undo_b:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpH-ZQ-0Ie"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-mR-Bz1">
+                                <rect key="frame" x="139" y="97" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="清零"/>
+                                <connections>
+                                    <action selector="clearall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vi6-PB-CgD"/>
                                 </connections>
                             </button>
                         </subviews>

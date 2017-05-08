@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     var undonum_a = 0
     
     var n=0
-    
+    var temp  = Int()
+    var temp_1 = Int()
     @IBOutlet weak var result_a: UITextField!
     @IBOutlet weak var result_b: UITextField!
     
@@ -33,13 +34,10 @@ class ViewController: UIViewController {
         @IBAction func add_a(_ sender: Any) {
         result_a.text=""
         result_b.text=""
-        var temp=Int()
         count_a=Int(score_a.text!)!
         temp=count_a+1
         score_a.text="\(temp)"
-        
-        
-        if count_a+1>=10 || count_b+1>=10
+                if count_a+1>=10 || count_b+1>=10
         {
             if count_a+1==11 && count_b+1<=9{
                 count_a=0
@@ -93,7 +91,6 @@ class ViewController: UIViewController {
     @IBAction func add_b(_ sender: Any) {
         result_a.text=""
         result_b.text=""
-        var temp_1=Int()
         count_b=Int(score_b.text!)!
         temp_1=count_b+1
         score_b.text="\(temp_1)"
@@ -150,10 +147,22 @@ class ViewController: UIViewController {
     }
     @IBAction func undo_a(_ sender: Any) {
         
+        temp = temp - 1
+        count_a = count_a - 1
+        score_a.text="\(temp)"
         
-        undonum_a -= 1
-        score_a.text="\(undonum_a)"
-        
+    }
+    @IBAction func undo_b(_ sender: Any) {
+        temp_1 = temp_1 - 1
+        count_b = count_b - 1
+        score_b.text="\(temp_1)"
+
+    }
+    @IBAction func clearall(_ sender: Any) {
+        count_b = 0
+        count_a = 0
+        score_a.text="0"
+        score_b.text="0"
     }
     
     
