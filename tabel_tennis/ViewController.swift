@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         count_a=Int(score_a.text!)!
         temp=count_a+1
         score_a.text="\(temp)"
-                if count_a+1>=10 || count_b+1>=10
+        if count_a+1>=10 || count_b+1>=10
         {
             if count_a+1==11 && count_b+1<=9{
                 count_a=0
@@ -59,7 +59,8 @@ class ViewController: UIViewController {
                 score_b.text="0"
                 total_b.text="\(point_b)"
             }
-            else if count_a+1>=10 && count_b+1>=10
+        }
+        if count_a+1>=10 && count_b+1>=10
             {
                 if count_a - count_b > 1{
                     count_a=0
@@ -75,14 +76,14 @@ class ViewController: UIViewController {
                     count_a=0
                     count_b=0
                     result_a.text="Alost"
-                    result_a.text="Bwin"
-                    point_a+=1
+                    result_b.text="Bwin"
+                    point_b+=1
                     score_a.text="0"
                     score_b.text="0"
-                    total_a.text="\(point_a)"
+                    total_b.text="\(point_b)"
                 }
             }
-        }
+        
             
             
         
@@ -118,7 +119,8 @@ class ViewController: UIViewController {
                 score_b.text="0"
                 total_b.text="\(point_b)"
             }
-            else if count_a+1>=10 && count_b+1>=10
+        }
+            if count_a+1>=10 && count_b+1>=10
             {
                 if count_a - count_b > 1{
                     count_a=0
@@ -134,14 +136,14 @@ class ViewController: UIViewController {
                     count_a=0
                     count_b=0
                     result_a.text="Alost"
-                    result_a.text="Bwin"
-                    point_a+=1
+                    result_b.text="Bwin"
+                    point_b+=1
                     score_a.text="0"
                     score_b.text="0"
-                    total_a.text="\(point_a)"
+                    total_b.text="\(point_b)"
                 }
             }
-        }
+        
         undonum_a = count_a + 1
         
     }
@@ -149,7 +151,12 @@ class ViewController: UIViewController {
         
         temp = temp - 1
         count_a = count_a - 1
-        score_a.text="\(temp)"
+        if temp < 0{
+            score_a.text="0"
+        }
+        else {
+            score_a.text="\(temp)"
+        }
         
     }
     @IBAction func undo_b(_ sender: Any) {
@@ -161,6 +168,8 @@ class ViewController: UIViewController {
     @IBAction func clearall(_ sender: Any) {
         count_b = 0
         count_a = 0
+        temp_1=0
+        temp=0
         score_a.text="0"
         score_b.text="0"
     }
