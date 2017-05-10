@@ -162,7 +162,12 @@ class ViewController: UIViewController {
     @IBAction func undo_b(_ sender: Any) {
         temp_1 = temp_1 - 1
         count_b = count_b - 1
-        score_b.text="\(temp_1)"
+        if temp_1 < 0{
+            score_b.text="0"
+        }
+        else {
+            score_b.text="\(temp_1)"
+        }
 
     }
     @IBAction func clearall(_ sender: Any) {
