@@ -45,9 +45,12 @@ class ViewController: UIViewController {
                 result_a.text="Awin"
                 result_b.text="Blost"
                 point_a+=1
+                temp=0
+                temp_1=0
                 score_a.text="0"
                 score_b.text="0"
                 total_a.text="\(point_a)"
+                
             }
             else if count_b+1==11 && count_a+1<=9{
                 count_a=0
@@ -55,6 +58,8 @@ class ViewController: UIViewController {
                 result_a.text="Alost"
                 result_b.text="Bwin"
                 point_b+=1
+                temp=0
+                temp_1=0
                 score_a.text="0"
                 score_b.text="0"
                 total_b.text="\(point_b)"
@@ -68,6 +73,8 @@ class ViewController: UIViewController {
                     result_a.text="Awin"
                     result_b.text="Blost"
                     point_a+=1
+                    temp=0
+                    temp_1=0
                     score_a.text="0"
                     score_b.text="0"
                     total_a.text="\(point_a)"
@@ -78,6 +85,8 @@ class ViewController: UIViewController {
                     result_a.text="Alost"
                     result_b.text="Bwin"
                     point_b+=1
+                    temp=0
+                    temp_1=0
                     score_a.text="0"
                     score_b.text="0"
                     total_b.text="\(point_b)"
@@ -105,6 +114,8 @@ class ViewController: UIViewController {
                 result_a.text="Awin"
                 result_b.text="Blost"
                 point_a+=1
+                temp=0
+                temp_1=0
                 score_a.text="0"
                 score_b.text="0"
                 total_a.text="\(point_a)"
@@ -115,6 +126,8 @@ class ViewController: UIViewController {
                 result_a.text="Alost"
                 result_b.text="Bwin"
                 point_b+=1
+                temp=0
+                temp_1=0
                 score_a.text="0"
                 score_b.text="0"
                 total_b.text="\(point_b)"
@@ -128,6 +141,8 @@ class ViewController: UIViewController {
                     result_a.text="Awin"
                     result_b.text="Blost"
                     point_a+=1
+                    temp=0
+                    temp_1=0
                     score_a.text="0"
                     score_b.text="0"
                     total_a.text="\(point_a)"
@@ -138,6 +153,8 @@ class ViewController: UIViewController {
                     result_a.text="Alost"
                     result_b.text="Bwin"
                     point_b+=1
+                    temp=0
+                    temp_1=0
                     score_a.text="0"
                     score_b.text="0"
                     total_b.text="\(point_b)"

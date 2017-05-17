@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E144C1631EC955A100BC5049 /* Tennis Count Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E144C1611EC955A100BC5049 /* Tennis Count Model.xcdatamodeld */; };
 		E1881CD81EACCC2E00527A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1881CD71EACCC2E00527A02 /* AppDelegate.swift */; };
 		E1881CDA1EACCC2E00527A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1881CD91EACCC2E00527A02 /* ViewController.swift */; };
 		E1881CDD1EACCC2E00527A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1881CDB1EACCC2E00527A02 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E144C1621EC955A100BC5049 /* Tennis Count Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tennis Count Model.xcdatamodel"; sourceTree = "<group>"; };
+		E144C16A1EC958E000BC5049 /* Tennis Count Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tennis Count Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		E1881CD41EACCC2E00527A02 /* tabel_tennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabel_tennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1881CD71EACCC2E00527A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1881CD91EACCC2E00527A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,8 +107,9 @@
 				E1881CD91EACCC2E00527A02 /* ViewController.swift */,
 				E1881CDB1EACCC2E00527A02 /* Main.storyboard */,
 				E1881CDE1EACCC2E00527A02 /* Assets.xcassets */,
-				E1881CE01EACCC2E00527A02 /* LaunchScreen.storyboard */,
 				E1881CE31EACCC2E00527A02 /* Info.plist */,
+				E1881CE01EACCC2E00527A02 /* LaunchScreen.storyboard */,
+				E144C1611EC955A100BC5049 /* Tennis Count Model.xcdatamodeld */,
 			);
 			path = tabel_tennis;
 			sourceTree = "<group>";
@@ -268,6 +272,7 @@
 			files = (
 				E1881CDA1EACCC2E00527A02 /* ViewController.swift in Sources */,
 				E1881CD81EACCC2E00527A02 /* AppDelegate.swift in Sources */,
+				E144C1631EC955A100BC5049 /* Tennis Count Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +523,7 @@
 				E1881CFE1EACCC2E00527A02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1881CFF1EACCC2E00527A02 /* Build configuration list for PBXNativeTarget "tabel_tennisTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +532,7 @@
 				E1881D011EACCC2E00527A02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1881D021EACCC2E00527A02 /* Build configuration list for PBXNativeTarget "tabel_tennisUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,8 +541,24 @@
 				E1881D041EACCC2E00527A02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E144C1611EC955A100BC5049 /* Tennis Count Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E144C16A1EC958E000BC5049 /* Tennis Count Model 2.xcdatamodel */,
+				E144C1621EC955A100BC5049 /* Tennis Count Model.xcdatamodel */,
+			);
+			currentVersion = E144C1621EC955A100BC5049 /* Tennis Count Model.xcdatamodel */;
+			name = "Tennis Count Model.xcdatamodeld";
+			path = "../Tennis Count Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E1881CCC1EACCC2D00527A02 /* Project object */;
 }
