@@ -305,10 +305,14 @@ class ViewController: UIViewController {
     @IBAction func clearall(_ sender: Any) {
         count_b = 0
         count_a = 0
+        point_a=0
+        point_b=0
         temp_1=0
         temp=0
         score_a.text="0"
         score_b.text="0"
+        total_a.text="0"
+        total_b.text="0"
     }
     
     

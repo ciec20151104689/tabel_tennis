@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Athletes" representedClassName="Athletes" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Athletes" inverseName="game" inverseEntity="Athletes" syncable="YES"/>
+        <attribute name="gamea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameB" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scorea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scoreb" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Score" representedClassName="Score" syncable="YES" codeGenerationType="class">
+        <attribute name="games" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Athletes" positionX="-63" positionY="-9" width="128" height="90"/>
+        <element name="Athletes" positionX="-63" positionY="-9" width="128" height="133"/>
+        <element name="Score" positionX="72" positionY="-3" width="128" height="73"/>
     </elements>
 </model>
