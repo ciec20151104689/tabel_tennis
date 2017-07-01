@@ -8,12 +8,7 @@
         <attribute name="scorea" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scoreb" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Score" representedClassName="Score" syncable="YES" codeGenerationType="class">
-        <attribute name="games" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
         <element name="Athletes" positionX="-63" positionY="-9" width="128" height="133"/>
-        <element name="Score" positionX="72" positionY="-3" width="128" height="73"/>
     </elements>
 </model>

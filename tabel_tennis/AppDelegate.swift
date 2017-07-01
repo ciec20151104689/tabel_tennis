@@ -40,6 +40,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    class func insertData(){
+        
+        //获取数据上下文对象
+        let app = UIApplication.shared.delegate as! AppDelegate
+        //let context = app.persistentContainer.viewContext
+        
+        //创建user对象
+        let EntityName = "Althletes"
+        //let oneUser = NSEntityDescription.insertNewObject(forEntityName: EntityName, into:context) as! User
+        
+        //对象赋值
+        //oneUser.userID = 2
+       // oneUser.userEmail = "12345@163.com"
+        //oneUser.userPwd = "123456"
+        
+        //保存
+       // app.saveContext()
+    }
 
 
 }
