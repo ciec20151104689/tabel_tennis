@@ -7,13 +7,24 @@
 //
 
 import UIKit
+var    imageaall:UIImage!
+var    imageball:UIImage!
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController,
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate {
 
     @IBOutlet weak var score_a: UITextField!
     @IBOutlet weak var score_b: UITextField!
     @IBOutlet weak var total_a: UITextField!
     @IBOutlet weak var total_b: UITextField!
+    
+    @IBOutlet weak var imagea: UIImageView!
+    @IBOutlet weak var imageb: UIImageView!
+    
+    @IBOutlet weak var image_a: UIImageView!
+    @IBOutlet weak var image_b: UIImageView!
     
     
     var count_a = 1
@@ -21,14 +32,47 @@ class ViewController: UIViewController {
     var point_a = 0
     var point_b = 0
     var undonum_a = 0
-    
-    var n=0
+    var im1 = 0
+    var im2 = 0
+    var n = 0
     var temp  = Int()
     var temp_1 = Int()
     @IBOutlet weak var result_a: UITextField!
     @IBOutlet weak var result_b: UITextField!
     
-   
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        //查看info对象
+        print(info)
+        
+        //显示的图片
+        let image:UIImage!
+        image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        if(im1==1){
+            imagea.image = image
+            imageaall = imagea.image
+        }
+        if(im2==1){
+            imageb.image = image
+            imageball = imageb.image
+        }
+        //图片控制器退出
+        picker.dismiss(animated: true, completion: {
+            () -> Void in
+        })
+    }
+    
+    @IBAction func start(_ sender: UIButton) {
+        image_a.image = imageaall
+        image_b.image = imageball
+        
+    }
+    
+    
+    
+    
+    
     
 
         @IBAction func add_a(_ sender: Any) {
@@ -315,7 +359,48 @@ class ViewController: UIViewController {
         total_b.text="0"
     }
     
+    @IBAction func uploada(_ sender: UIButton) {
+        
+        im1=1
+        im2=0
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            //初始化图片控制器
+            let picker = UIImagePickerController()
+            //设置代理
+        picker.delegate = self
+            //指定图片控制器类型v            
+            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            //弹出控制器，显示界面
+            self.present(picker, animated: true, completion: {
+                () -> Void in
+            })
+        }
+        else{
+            print("读取相册错误")
+        }
+        //}
+    }
     
+    @IBAction func uploadb(_ sender: UIButton) {
+        im1=0
+        im2=1
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            //初始化图片控制器
+            let picker = UIImagePickerController()
+            //设置代理
+            picker.delegate = self
+            //指定图片控制器类型v
+            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            //弹出控制器，显示界面
+            self.present(picker, animated: true, completion: {
+                () -> Void in
+            })
+        }
+        else{
+            print("读取相册错误")
+        }
+
+    }
     
     
     override func viewDidLoad() {

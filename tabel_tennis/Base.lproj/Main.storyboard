@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41e-q3-yUx">
-                                <rect key="frame" x="106" y="367" width="97" height="30"/>
+                                <rect key="frame" x="147" y="367" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,7 +47,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3K-SM-s9s">
-                                <rect key="frame" x="78" y="367" width="30" height="30"/>
+                                <rect key="frame" x="118" y="367" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -119,10 +119,28 @@
                                     <segue destination="Z5U-gI-MEj" kind="show" id="54W-6O-pTn"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSL-SJ-jmo">
+                                <rect key="frame" x="156" y="271" width="88" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24g-Rj-nih">
+                                <rect key="frame" x="265" y="255" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfR-RJ-PRY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUG-49-rjJ">
+                                <rect key="frame" x="68" y="175" width="88" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="image_a" destination="lUG-49-rjJ" id="Zi0-N6-2xp"/>
+                        <outlet property="image_b" destination="hSL-SJ-jmo" id="Sdu-9D-5K5"/>
                         <outlet property="result_a" destination="5Aa-KF-zaq" id="j8N-R9-x4T"/>
                         <outlet property="result_b" destination="CqC-W0-blD" id="Mm6-Dh-VCr"/>
                         <outlet property="score_a" destination="JeC-qF-aEe" id="Fum-Dq-gxP"/>
@@ -138,7 +156,7 @@
         <!--View Controller-->
         <scene sceneID="Oov-0s-H4q">
             <objects>
-                <viewController id="Z5U-gI-MEj" sceneMemberID="viewController">
+                <viewController id="Z5U-gI-MEj" customClass="ViewController" customModule="tabel_tennis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cik-mT-yLM"/>
                         <viewControllerLayoutGuide type="bottom" id="Fyn-7i-AHk"/>
@@ -155,10 +173,38 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="vhH-mn-95s"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNK-Hf-g8Z">
+                                <rect key="frame" x="180" y="57" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAt-kp-xHV">
+                                <rect key="frame" x="23" y="57" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oid-O6-T9G">
+                                <rect key="frame" x="50" y="196" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="uploada:" destination="Z5U-gI-MEj" eventType="touchUpInside" id="5s8-C9-hHv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGa-ou-ekq">
+                                <rect key="frame" x="207" y="196" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="uploadb:" destination="Z5U-gI-MEj" eventType="touchUpInside" id="lgX-Th-tDf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pDv-vQ-Ya2"/>
+                    <connections>
+                        <outlet property="imagea" destination="aAt-kp-xHV" id="J02-bm-J58"/>
+                        <outlet property="imageb" destination="nNK-Hf-g8Z" id="HIO-tO-Pq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caL-QT-OJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

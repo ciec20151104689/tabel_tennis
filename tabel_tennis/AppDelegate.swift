@@ -44,11 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     class func insertData(){
         
         //获取数据上下文对象
-        let app = UIApplication.shared.delegate as! AppDelegate
+        //let app = UIApplication.shared.delegate as! AppDelegate
         //let context = app.persistentContainer.viewContext
         
         //创建user对象
-        let EntityName = "Althletes"
+       // let EntityName = "Althletes"
         //let oneUser = NSEntityDescription.insertNewObject(forEntityName: EntityName, into:context) as! User
         
         //对象赋值
